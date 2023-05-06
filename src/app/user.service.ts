@@ -10,8 +10,13 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
   signUp(user:any):Observable<any>{
-    // console.log(user.fname);
-    
+    let url=environment.apiUrl+"/user/create"
+    let hdr = "hello";
+    return this.http.post(url, user, {
+      headers: {
+        header:hdr
+      }
+    });
     return this.http.post(environment.apiUrl+"/signUp",user)
   }
 
@@ -34,5 +39,37 @@ resetPassword(otp:any, password:any, confirmpassword:any):Observable<any>{
 getAllCategory():Observable<any>{
   return this.http.get(environment.apiUrl+"/allcategory")
 }
+
+deleteCategoryById(id:any):Observable<any>{
+
+  return this.http.delete(environment.apiUrl+"/deleteCategoryById/"+id)
+}
+
+manageSubCategory(user:any):Observable<any>{
+  return this.http.post(environment.apiUrl+"/subCatAdd",user)
+}
+
+getAllSubCategory():Observable<any>{
+  return this.http.get(environment.apiUrl+"/getAllSUbCategory")
+
+}
+
+deleteSubCategoryById(id:any):Observable<any>{
+  return this.http.delete(environment.apiUrl+"/deleteSubCategory/"+id)
+}
+
+addVendor(user:any):Observable<any>{
+  return this.http.post(environment.apiUrl+"/vendoradd",user)
+}
+
+getAllVendor():Observable<any>{
+  return this.http.get(environment.apiUrl+"/getAllVen")
+
+}
+
+deleteVendorById(id:any):Observable<any>{
+  return this.http.delete(environment.apiUrl+"/deleteVenById/"+id)
+}
+
 
 }

@@ -77,22 +77,22 @@
 <body>
 	<div class="container">
 		<div class="header">
-			<h1>Categories</h1>
+			<h1>Vendor's</h1>
 		</div>
         <br><br><br>
-            <button routerLink="/managecategory">Add Category</button>
+            <button routerLink="/managevendor">Add Vendor</button>
            
             <table border="1">
-                <tr *ngIf = "categoryList">
-                    <th>Category ID</th>
-                    <th>Category Name</th>
-					<th>Action</th>
+                <tr *ngIf = "vendorlist">
+                    <th>Vendor ID</th>
+                    <th>Vendor Name</th>
+                    <th>Action</th>
                 </tr>
-                <tr *ngFor = "let category of categoryList">
+                <tr *ngFor = "let vendor of vendorlist">
                 
-                    <td>{{category["categoryid"]}}</td>
-                    <td>{{category["categoryName"]}}</td>
-                    <td><button (click)="deleteCategory(category['categoryid'])">Delete</button></td>
+                    <td>{{vendor["vendorId"]}}</td>
+                    <td>{{vendor["vendorName"]}}</td>
+                    <td><button (click)="deleteVendor(vendor['vendorId'])">Delete</button></td>
                 </tr>
                 
                 </table>

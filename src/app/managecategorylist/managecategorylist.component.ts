@@ -19,4 +19,13 @@ this.categoryList = resp.data
 
 }
 
+deleteCategory(id:any){
+  console.log("CategoryId=>"+id);
+  this.userService.deleteCategoryById(id).subscribe(resp=>{
+
+    this.categoryList=this.categoryList.filter(user=> user['categoryid'] != id);
+    
+  })
+}
+
 }

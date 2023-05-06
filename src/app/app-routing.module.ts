@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
@@ -9,6 +9,9 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { ManagecategoryComponent } from './managecategory/managecategory.component';
 import { ManagesubcategoryComponent } from './managesubcategory/managesubcategory.component';
 import { ManagecategorylistComponent } from './managecategorylist/managecategorylist.component';
+import { SubcategorylistComponent } from './subcategorylist/subcategorylist.component';
+import { ManagevendorComponent } from './managevendor/managevendor.component';
+import { VendorlistComponent } from './vendorlist/vendorlist.component';
 
 const routes: Routes = [
 
@@ -68,8 +71,28 @@ path:"managesubcategory"
 {
   component:ManagecategorylistComponent,
   path:"managecategorylist"
-}
+},
 
+{
+
+ component:SubcategorylistComponent,
+ path:"subCatList"
+
+},
+
+{
+
+component:ManagevendorComponent,
+path:"managevendor"
+
+},
+
+{
+
+component:VendorlistComponent,
+path:"vendorList"
+
+}
 
 
 ];

@@ -13,7 +13,10 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { ManagecategoryComponent } from './managecategory/managecategory.component';
 import { ManagesubcategoryComponent } from './managesubcategory/managesubcategory.component';
-import { ManagecategorylistComponent } from './managecategorylist/managecategorylist.component'
+import { ManagecategorylistComponent } from './managecategorylist/managecategorylist.component';
+import { SubcategorylistComponent } from './subcategorylist/subcategorylist.component';
+import { ManagevendorComponent } from './managevendor/managevendor.component';
+import { VendorlistComponent } from './vendorlist/vendorlist.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,10 @@ import { ManagecategorylistComponent } from './managecategorylist/managecategory
     AdmindashboardComponent,
     ManagecategoryComponent,
     ManagesubcategoryComponent,
-    ManagecategorylistComponent
+    ManagecategorylistComponent,
+    SubcategorylistComponent,
+    ManagevendorComponent,
+    VendorlistComponent
   ],
   imports: [
     BrowserModule,
